@@ -12,7 +12,7 @@ const Home = () => {
 
   const markAttendance = async () => {
     if (date) {
-      const {data} = await axios.post('http://localhost:8000/', { date });
+      const {data} = await axios.post('https://attendance-tracker-server.vercel.app/', { date });
       alert(`${data.message}`)
       fetchAttendance() 
     } else {
@@ -26,7 +26,7 @@ const Home = () => {
   };
 
   const fetchAttendance = async () => {
-    const { data } = await axios.get('http://localhost:8000/fetchAttendance');
+    const { data } = await axios.get('https://attendance-tracker-server.vercel.app/fetchAttendance');
     const newData = [];
 
     for (let i = 0; i < 12; i++) {
