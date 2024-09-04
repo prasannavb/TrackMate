@@ -39,13 +39,20 @@ const Home = () => {
     setFetched(true);
   };
 
+  const CalculateTodayDate=()=>
+  {
+     const today = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
+     setDate(today)
+  }
+
   useEffect(()=>{
     fetchAttendance();
+    CalculateTodayDate();
   },[])
 
   return (
     <>
-      <input type="date" name="date" onChange={handleDateChange} />
+      <input type="date" name="date" onChange={handleDateChange} value={date} />
       <button  onClick={markAttendance}>Present</button>
       {/* <button onClick={fetchAttendance}>Fetch</button> */}
 
