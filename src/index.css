@@ -9,6 +9,5 @@ body,html
 
 *{
   box-sizing: border-box;
-    font-family: "Poppins";
-    font-style: normal;
+  font-family: "Poppins";
 }

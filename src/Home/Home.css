@@ -1,112 +1,140 @@
-.Home
-{
-    width: 100%;
-    height: 90vh;
-    border: 2px solid blue;
-    display: flex;
-    flex-direction: row;
-    background-color: whitesmoke;
+.Home {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  background-color: whitesmoke;
 }
 
-.Home-div-1,.Home-div-2
-{
-    border: 2px solid red;
-    width: 25%;
-    height: 100%;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-}
-.Home-div-2
-{
-    width: 75%;
-    padding: 1%;
+.Home-div-1, .Home-div-2 {
+  width: 25%;
+  height: 100%;
+  padding: 2%;
+  display: flex;  
+  flex-direction: column;
 }
 
-.Home-date-div
-{
-    /* border: 2px solid red; */
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 10px;
-    width: 100%;
-    height:25vh;
-    padding: 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.Home-date-div h1
-{
-    margin: 0;
-}
-.Home-date-div h1 span
-{
-    cursor: pointer;
+.Home-div-2 { 
+  border-left: 4px solid #e5e7eb;
+  width: 75%;
+  padding: 1%;
+  align-items: center;
 }
 
-.Home-date-div input,.Home-date-div button
-{
-    width:75%;
-    padding:2%;
-    margin:2%;
-    border-radius: 5px;
-}
-.Home-date-div button
-{
-    background-color: #3b82f6;
-    border: none;
-    color: white;
-    padding: 2.5%;
-    cursor: pointer;
-    font-size: large;
-}
-.Home-date-div button:hover
-{
-    transform: scale(1.01);
+.Home-div-1 {
+  justify-content: center;
 }
 
-.Home-table {
-    width: 100%;
-    height: 100%;
-    border-collapse: collapse;
-    margin-top: 1%;
-    background-color: #f9f9f9;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .Home-table th, .Home-table td {
-    border: 1px solid #e5e7eb;
-    padding: 1%;
-    text-align: left;
-    font-size: 14px;
-  }
-  /* Constrain the width of the second column */
-  .Home-table .second-column {
-    max-width: 500px;  /* Adjust this value based on how wide you want the column */
-    white-space: nowrap;
-    overflow-x: auto;
-  }
-  
-  .Home-table .date-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;  /* Allows the content to scroll horizontally */
-  }
-  
-  .date-wrapper div {
-    margin-right: 10px;
-  }
-  
-  /* Styling for .Home-table header */
-  .Home-table thead {
-    background-color: #3b82f6;
-    color: white;
-  }
-  
-  .Home-table thead th {
-    padding: 1.2;
-    font-size: 16px;
-  }
-  
+.Home-date-div, .Home-table-div {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  width: 100%;
+  height: 25vh;
+  padding: 1%;
+}
+
+.Home-date-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home-date-div h1 {
+  margin: 0;
+}
+
+.Home-date-div h1 span {
+  cursor: pointer;
+}
+
+.Home-date-div input, .Home-date-div button {
+  width: 75%;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 5px;
+}
+
+.Home-date-div button {
+  background-color: #17494f;
+  border: none;
+  color: white;
+  padding: 2.5%;
+  cursor: pointer;
+  font-size: large;
+}
+
+.Home-date-div button:hover {
+  transform: scale(1.01);
+}
+
+.Home-table-div {
+  height: 75vh;
+  margin-top: 4%;
+  padding: 0%;
+}
+
+.Home-table-div table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.Home-table-div th, .Home-table-div td, .Home-div-2 td {
+  border: 1px solid #e5e7eb;
+  padding: 1.9%;
+  text-align: left;
+  font-size: 14px;
+}
+
+.Home-table-div th, .Home-div-2 th {
+  background-color: #17494f;
+  color: white;
+  text-transform: uppercase;
+}
+
+.Home-table-div tr:hover, .Home-div-2 td:hover {
+  background-color: #bbd5ff;
+}
+
+.Home-table-div td {
+  cursor: pointer;
+}
+
+.Home-div-2 table {
+  border-collapse: collapse;
+  width: 75%;
+  height: fit-content;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Home-div-2 th {
+  font-size: larger;
+  padding: 2%;
+}
+
+.Home-div-2 tr {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Home-div-2 td {
+  width: 25%;
+  text-align: center;
+  font-size: medium;
+}
+
+.Home-div-2 tr img {
+  width: 100%;
+  height: 100%;
+}
+
+.Home-sidebar-table tr.active {
+  background-color: red;
+  color: white;
+}

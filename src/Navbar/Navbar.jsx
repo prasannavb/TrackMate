@@ -1,32 +1,29 @@
-//Styles
-import { useNavigate } from 'react-router'
-import './Navbar.css'
+//Dependencies
+import { useNavigate } from "react-router";
 
-const Navbar=()=>
-{
-    const Navigate=useNavigate()
+//CSS
+import "./Navbar.css";
 
-    const Logout=()=>
-    {
-        Navigate('/')
-    }
+const Navbar = () => {
+  const Navigate = useNavigate();
 
-    return(
-        <>
-            <div className='Navbar'>
-                <div className='Navbar-Logo'>
+  const Logout = () => {
+    Navigate("/");
+  };
 
-                </div>
-                <div className='Navbar-title'>
-                    <h1>Attendance Tracker</h1>
-                </div>
-                <div className='Navbar-btns'>
+  return (
+    <>
+      <div className="Navbar">
+        <div className="Navbar-Logo"></div>
+        <div className="Navbar-title">
+          <h1>TrackMate</h1>
+        </div>
+        <div className="Navbar-btns">
+          <button onClick={Logout}>Logout</button>
+        </div>
+      </div>
+    </>
+  );
+};
 
-                    <button onClick={Logout}>Logout</button>
-                </div>
-            </div>
-        </>
-    )
-}
-
-export default Navbar
+export default Navbar;
