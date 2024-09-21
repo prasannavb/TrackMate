@@ -95,8 +95,14 @@
   text-transform: uppercase;
 }
 
-.Home-table-div tr:hover, .Home-div-2 td:hover {
+.Home-table-div tr:hover {
   background-color: #bbd5ff;
+}
+
+.Home-div-2 td:hover
+{
+  background-color: rgb(255, 147, 147);
+  cursor: pointer;
 }
 
 .Home-table-div td {
@@ -134,7 +140,3 @@
   height: 100%;
 }
 
-.Home-sidebar-table tr.active {
-  background-color: red;
-  color: white;
-}

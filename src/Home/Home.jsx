@@ -32,7 +32,7 @@ const Home = () => {
 
   const markAttendance = async () => {
     const { data } = await axios.post(
-      "https://attendance-tracker-server.vercel.app/",
+      "http://localhost:8000/",
       { date },
     );
     alert(`${data.message}`);
@@ -49,7 +49,7 @@ const Home = () => {
 
   const fetchAttendance = async (inputYear) => {
     const { data } = await axios.post(
-      "https://attendance-tracker-server.vercel.app/fetchAttendance",
+      "http://localhost:8000/fetchAttendance",
       {
         inputYear,
       },
@@ -81,11 +81,27 @@ const Home = () => {
 
   const fetchAttendanceOnMonth = async (_year, _month) => {
     const { data } = await axios.post(
-      "https://attendance-tracker-server.vercel.app/fetchAttendancePerMonth",
+      "http://localhost:8000/fetchAttendancePerMonth",
       { _year, _month },
     );
     setMonthlyAttendance(data.AttendanceData);
-  };
+  }
+
+  const deleteAttendance=async(_date,_year)=>
+  {
+    
+    const status=confirm("Are you sure you want to delete")
+    if(status)
+    {
+    const {data}=await axios.delete("http://localhost:8000/deleteAttendancePerMonth", {
+      data: { _date, _year } 
+    });
+    alert(data.message)
+    fetchAttendance(year);
+    fetchAttendanceOnMonth(year, month);
+    }
+
+  }
 
   useEffect(() => {
     calculateTodayDate();
@@ -162,7 +178,7 @@ const Home = () => {
                 <tbody>
                   <tr>
                     {monthlyAttendance.map((data) => (
-                      <td>{data.date}</td>
+                      <td onClick={()=>{deleteAttendance(data.date,year)}} key={data._id}>{data.date}</td>
                     ))}
                   </tr>
                 </tbody>
