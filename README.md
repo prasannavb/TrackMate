@@ -52,5 +52,4 @@ The **TrackMate** is designed to make employee attendance management straightfor
 
 This system is ideal for companies looking for a minimalistic and efficient way to handle attendance tracking, with features for correcting mistakes and managing records across different time periods.
 
-
-
+# Copyright ©2025 All rights reserved |Designed by Prasanna V B
