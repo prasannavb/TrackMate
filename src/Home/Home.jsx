@@ -32,7 +32,7 @@ const Home = () => {
 
   const markAttendance = async () => {
     const { data } = await axios.post(
-      "http://localhost:8000/",
+      "https://attendance-tracker-server.vercel.app/",
       { date },
     );
     alert(`${data.message}`);
@@ -49,7 +49,7 @@ const Home = () => {
 
   const fetchAttendance = async (inputYear) => {
     const { data } = await axios.post(
-      "http://localhost:8000/fetchAttendance",
+      "https://attendance-tracker-server.vercel.app/fetchAttendance",
       {
         inputYear,
       },
@@ -81,7 +81,7 @@ const Home = () => {
 
   const fetchAttendanceOnMonth = async (_year, _month) => {
     const { data } = await axios.post(
-      "http://localhost:8000/fetchAttendancePerMonth",
+      "https://attendance-tracker-server.vercel.app/fetchAttendancePerMonth",
       { _year, _month },
     );
     setMonthlyAttendance(data.AttendanceData);
@@ -93,7 +93,7 @@ const Home = () => {
     const status=confirm("Are you sure you want to delete")
     if(status)
     {
-    const {data}=await axios.delete("http://localhost:8000/deleteAttendancePerMonth", {
+    const {data}=await axios.delete("https://attendance-tracker-server.vercel.app/deleteAttendancePerMonth", {
       data: { _date, _year } 
     });
     alert(data.message)
