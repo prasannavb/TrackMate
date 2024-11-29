@@ -1,0 +1,12 @@
+.PageNotFound
+{
+    width:100%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.PageNotFound img
+{
+    width: 100%;
+    height: 100%;
+}
